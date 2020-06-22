@@ -422,35 +422,35 @@ endif
 " fast window switching: ALT+SHIFT+HJKL
 "----------------------------------------------------------------------
 if get(g:, 'terminal_default_mapping', 1)
-	noremap <m-H> <c-w>h
-	noremap <m-L> <c-w>l
-	noremap <m-J> <c-w>j
-	noremap <m-K> <c-w>k
+	noremap <Leader>h <c-w>h
+	noremap <Leader>l <c-w>l
+	noremap <Leader>j <c-w>j
+	noremap <Leader>k <c-w>k
 	if mapcheck('<m-P>', 'n') == ''
 		noremap <m-P> <c-w>p
 	endif
-	inoremap <m-H> <esc><c-w>h
-	inoremap <m-L> <esc><c-w>l
-	inoremap <m-J> <esc><c-w>j
-	inoremap <m-K> <esc><c-w>k
+	inoremap <Leader>h <esc><c-w>h
+	inoremap <Leader>l <esc><c-w>l
+	inoremap <Leader>j <esc><c-w>j
+	inoremap <Leader>k <esc><c-w>k
 	if mapcheck('<m-P>', 'n') == ''
 		inoremap <m-P> <esc><c-w>p
 	endif
 
 	if has('terminal') && exists(':terminal') == 2 && has('patch-8.1.1')
 		set termwinkey=<c-_>
-		tnoremap <m-H> <c-_>h
-		tnoremap <m-L> <c-_>l
-		tnoremap <m-J> <c-_>j
-		tnoremap <m-K> <c-_>k
+		tnoremap <Leader>h <c-_>h
+		tnoremap <Leader>l <c-_>l
+		tnoremap <Leader>j <c-_>j
+		tnoremap <Leader>k <c-_>k
 		tnoremap <m-P> <c-_>p
 		tnoremap <m-q> <c-\><c-n>
 		tnoremap <m--> <c-_>"0
 	elseif has('nvim')
-		tnoremap <m-H> <c-\><c-n><c-w>h
-		tnoremap <m-L> <c-\><c-n><c-w>l
-		tnoremap <m-J> <c-\><c-n><c-w>j
-		tnoremap <m-K> <c-\><c-n><c-w>k
+		tnoremap <Leader>h <c-\><c-n><c-w>h
+		tnoremap <Leader>l <c-\><c-n><c-w>l
+		tnoremap <Leader>j <c-\><c-n><c-w>j
+		tnoremap <Leader>k <c-\><c-n><c-w>k
 		tnoremap <m-P> <c-\><c-n><c-w>p
 		tnoremap <m-q> <c-\><c-n>
 		tnoremap <m--> <c-\><c-n>"0pa
